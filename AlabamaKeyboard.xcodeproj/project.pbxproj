@@ -14,6 +14,8 @@
 		490C543A2C6A76110097C024 /* AlabamaKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C54392C6A76110097C024 /* AlabamaKeyboardTests.swift */; };
 		490C54442C6A76110097C024 /* AlabamaKeyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C54432C6A76110097C024 /* AlabamaKeyboardUITests.swift */; };
 		490C54462C6A76110097C024 /* AlabamaKeyboardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C54452C6A76110097C024 /* AlabamaKeyboardUITestsLaunchTests.swift */; };
+		490C54592C6A762F0097C024 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C54582C6A762F0097C024 /* KeyboardViewController.swift */; };
+		490C545D2C6A762F0097C024 /* alamabamakeys.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 490C54562C6A762F0097C024 /* alamabamakeys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,28 @@
 			remoteGlobalIDString = 490C54242C6A76100097C024;
 			remoteInfo = AlabamaKeyboard;
 		};
+		490C545B2C6A762F0097C024 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 490C541D2C6A76100097C024 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 490C54552C6A762F0097C024;
+			remoteInfo = alamabamakeys;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		490C54612C6A762F0097C024 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				490C545D2C6A762F0097C024 /* alamabamakeys.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		490C54252C6A76100097C024 /* AlabamaKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlabamaKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +67,9 @@
 		490C543F2C6A76110097C024 /* AlabamaKeyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlabamaKeyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		490C54432C6A76110097C024 /* AlabamaKeyboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlabamaKeyboardUITests.swift; sourceTree = "<group>"; };
 		490C54452C6A76110097C024 /* AlabamaKeyboardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlabamaKeyboardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		490C54562C6A762F0097C024 /* alamabamakeys.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = alamabamakeys.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		490C54582C6A762F0097C024 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		490C545A2C6A762F0097C024 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +94,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		490C54532C6A762F0097C024 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +110,7 @@
 				490C54272C6A76100097C024 /* AlabamaKeyboard */,
 				490C54382C6A76110097C024 /* AlabamaKeyboardTests */,
 				490C54422C6A76110097C024 /* AlabamaKeyboardUITests */,
+				490C54572C6A762F0097C024 /* alamabamakeys */,
 				490C54262C6A76100097C024 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +121,7 @@
 				490C54252C6A76100097C024 /* AlabamaKeyboard.app */,
 				490C54352C6A76110097C024 /* AlabamaKeyboardTests.xctest */,
 				490C543F2C6A76110097C024 /* AlabamaKeyboardUITests.xctest */,
+				490C54562C6A762F0097C024 /* alamabamakeys.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +162,15 @@
 			path = AlabamaKeyboardUITests;
 			sourceTree = "<group>";
 		};
+		490C54572C6A762F0097C024 /* alamabamakeys */ = {
+			isa = PBXGroup;
+			children = (
+				490C54582C6A762F0097C024 /* KeyboardViewController.swift */,
+				490C545A2C6A762F0097C024 /* Info.plist */,
+			);
+			path = alamabamakeys;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,10 +181,12 @@
 				490C54212C6A76100097C024 /* Sources */,
 				490C54222C6A76100097C024 /* Frameworks */,
 				490C54232C6A76100097C024 /* Resources */,
+				490C54612C6A762F0097C024 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				490C545C2C6A762F0097C024 /* PBXTargetDependency */,
 			);
 			name = AlabamaKeyboard;
 			productName = AlabamaKeyboard;
@@ -183,6 +229,23 @@
 			productReference = 490C543F2C6A76110097C024 /* AlabamaKeyboardUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		490C54552C6A762F0097C024 /* alamabamakeys */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 490C545E2C6A762F0097C024 /* Build configuration list for PBXNativeTarget "alamabamakeys" */;
+			buildPhases = (
+				490C54522C6A762F0097C024 /* Sources */,
+				490C54532C6A762F0097C024 /* Frameworks */,
+				490C54542C6A762F0097C024 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = alamabamakeys;
+			productName = alamabamakeys;
+			productReference = 490C54562C6A762F0097C024 /* alamabamakeys.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +267,9 @@
 						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = 490C54242C6A76100097C024;
 					};
+					490C54552C6A762F0097C024 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 				};
 			};
 			buildConfigurationList = 490C54202C6A76100097C024 /* Build configuration list for PBXProject "AlabamaKeyboard" */;
@@ -222,6 +288,7 @@
 				490C54242C6A76100097C024 /* AlabamaKeyboard */,
 				490C54342C6A76110097C024 /* AlabamaKeyboardTests */,
 				490C543E2C6A76110097C024 /* AlabamaKeyboardUITests */,
+				490C54552C6A762F0097C024 /* alamabamakeys */,
 			);
 		};
 /* End PBXProject section */
@@ -244,6 +311,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		490C543D2C6A76110097C024 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		490C54542C6A762F0097C024 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,6 +353,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		490C54522C6A762F0097C024 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				490C54592C6A762F0097C024 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -291,6 +373,11 @@
 			isa = PBXTargetDependency;
 			target = 490C54242C6A76100097C024 /* AlabamaKeyboard */;
 			targetProxy = 490C54402C6A76110097C024 /* PBXContainerItemProxy */;
+		};
+		490C545C2C6A762F0097C024 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 490C54552C6A762F0097C024 /* alamabamakeys */;
+			targetProxy = 490C545B2C6A762F0097C024 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -417,6 +504,7 @@
 		490C544A2C6A76110097C024 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +534,7 @@
 		490C544B2C6A76110097C024 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -548,6 +637,56 @@
 			};
 			name = Release;
 		};
+		490C545F2C6A762F0097C024 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42JWN7H6YR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = alamabamakeys/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = alamabamakeys;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Harvard-University.AlabamaKeyboard.alamabamakeys";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		490C54602C6A762F0097C024 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42JWN7H6YR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = alamabamakeys/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = alamabamakeys;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Harvard-University.AlabamaKeyboard.alamabamakeys";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,6 +722,15 @@
 			buildConfigurations = (
 				490C54502C6A76110097C024 /* Debug */,
 				490C54512C6A76110097C024 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		490C545E2C6A762F0097C024 /* Build configuration list for PBXNativeTarget "alamabamakeys" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				490C545F2C6A762F0097C024 /* Debug */,
+				490C54602C6A762F0097C024 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
