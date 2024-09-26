@@ -16,6 +16,7 @@
 		490C54462C6A76110097C024 /* AlabamaKeyboardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C54452C6A76110097C024 /* AlabamaKeyboardUITestsLaunchTests.swift */; };
 		490C54592C6A762F0097C024 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C54582C6A762F0097C024 /* KeyboardViewController.swift */; };
 		490C545D2C6A762F0097C024 /* alamabamakeys.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 490C54562C6A762F0097C024 /* alamabamakeys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4923F8272CA5A55E009D7BEB /* Keyboardview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4923F8262CA5A55E009D7BEB /* Keyboardview.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		490C54562C6A762F0097C024 /* alamabamakeys.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = alamabamakeys.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		490C54582C6A762F0097C024 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		490C545A2C6A762F0097C024 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4923F8262CA5A55E009D7BEB /* Keyboardview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Keyboardview.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			children = (
 				490C54582C6A762F0097C024 /* KeyboardViewController.swift */,
 				490C545A2C6A762F0097C024 /* Info.plist */,
+				4923F8262CA5A55E009D7BEB /* Keyboardview.xib */,
 			);
 			path = alamabamakeys;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4923F8272CA5A55E009D7BEB /* Keyboardview.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,7 @@ struct ContentView: View {
                     .cornerRadius(2)
                     .overlay(
                         RoundedRectangle(cornerRadius: 2)
-                            .stroke(Color.gray, lineWidth: 1)
+                            .stroke(Color.white, lineWidth: 1)
                     )
             }
             .padding()
