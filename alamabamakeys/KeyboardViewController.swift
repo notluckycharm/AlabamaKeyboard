@@ -11,9 +11,13 @@ import SwiftUI
 class KeyboardViewController: UIInputViewController {
 
     @IBOutlet var nextKeyboardButton: UIButton!
-
+    @IBOutlet var letterButtons: [UIButton]!
+    
+    var capsLockIsOn = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         class MyClass: UIView {
         class func instanceFromNib() -> UIView {
             return UINib(nibName: "Keyboardview", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
@@ -29,13 +33,15 @@ class KeyboardViewController: UIInputViewController {
 
 //        button.addTarget(self, action: #selector(keyPressed(_:)), for: .touchUpInside)
 
-    @objc func keyPressed(_ sender: UIButton) {
-        if let title = sender.currentTitle {
-            let proxy = self.textDocumentProxy
-            proxy.insertText(title)
-        }
+    func handleCaps() {
+        capsLockIsOn ^= 1
+        for button in letterButtons {
+                    if let currentTitle = button.currentTitle {
+                        button.setTitle(capsLockIsOn != 0 ? currentTitle.uppercased() : currentTitle.lowercased(), for: .normal)
+                    }
+                }
     }
-
+    
     func setupNextKeyboardButton() {
         self.nextKeyboardButton = UIButton(type: .system)
         if let image = UIImage(systemName: "globe")?.withRenderingMode(.alwaysTemplate) {
@@ -47,12 +53,12 @@ class KeyboardViewController: UIInputViewController {
                 self.nextKeyboardButton.tintColor = .systemBlue // Customize this color as needed
             }
         var config = UIButton.Configuration.filled()
-        config.baseBackgroundColor = .systemGray4
+        config.baseBackgroundColor = UIColor.systemGray4
         config.baseForegroundColor = .black
         config.cornerStyle = .medium
         
+        
         self.nextKeyboardButton.configuration = config
-        self.nextKeyboardButton.sizeToFit()
         self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
         
         self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
@@ -63,7 +69,27 @@ class KeyboardViewController: UIInputViewController {
         self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
     
+    @IBAction func keyPressed(button: UIButton) {
+        var string = button.titleLabel?.text
+        if string == "◌́" {
+            string = "́"
+        }
+        else if string == "◌̀" {
+            string = "̀"
+        }
+        else if string == "space" {
+            string = " "
+        }
+        else if string == "return" {
+            string = "\r"
+        }
+        (self.textDocumentProxy as UIKeyInput).insertText("\(string!)")
+    }
 
+    @IBAction override func delete(_ sender: Any?) {
+        let proxy = self.textDocumentProxy
+            proxy.deleteBackward()
+    }
     override func viewWillLayoutSubviews() {
         self.nextKeyboardButton.isHidden = !self.needsInputModeSwitchKey
         super.viewWillLayoutSubviews()
